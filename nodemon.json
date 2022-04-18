@@ -1,0 +1,6 @@
+{
+  "ext": "js,mjs,json,ejs",
+  "events": {
+    "restart": "yarn run build:css"
+  }
+}

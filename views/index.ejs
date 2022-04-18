@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <title>URL Shortner</title>
+  </head>
+  <body class="bg-gray-900 text-white text-center flex h-screen j-center">
+    <div class="self-center w-full -mt-20">
+      <h1 class="text-4xl mb-10">
+        <span class="text-red-500">URL</span> Shortenet
+      </h1>
+      <% if(alias) { %>
+      <div
+        class="mb-10 bg-green-700 w-3/5 lg:w-1/3 mx-auto p-5 rounded-xl border-2 border-green-500"
+      >
+        Your Link:<br />
+        <a href="http://localhost:3030/<%=alias%>"
+          >http://localhost:3030/<%=alias%></a
+        >
+      </div>
+      <% } %>
+      <form
+        action="/"
+        method="post"
+        class="border-2 border-red-500 w-3/5 lg:w-2/5 mx-auto rounded-full flex"
+      >
+        <input
+          type="url"
+          name="url"
+          id="url"
+          placeholder="https://google.com"
+          class="flex-grow autofill:in mx-5 focus:outline-none bg-transparent"
+        />
+        <button
+          type="submit"
+          class="block whitespace-nowrap bg-red-500 p-2 px-5 rounded-full"
+        >
+          Shorten it!
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
